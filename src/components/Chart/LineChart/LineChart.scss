@@ -1,0 +1,23 @@
+.line-chart {
+  &__path {
+    stroke-width: 2;
+    fill: none;
+  }
+
+  &__axis {
+    stroke: #000000;
+  }
+
+  &__interval {
+    stroke: grey;
+
+    line {
+      stroke-dasharray: 20;
+      stroke-width: 0.5px;
+    }
+  }
+
+  &__path-area {
+    opacity: 30%;
+  }
+}
