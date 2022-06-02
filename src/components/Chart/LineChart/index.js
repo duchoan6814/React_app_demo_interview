@@ -4,20 +4,12 @@ import PropTypes from "prop-types";
 import { isArray } from "lodash";
 
 import "./LineChart.scss";
+import { dataFormatToArray } from "../helper";
 
 const prefix = "line-chart";
 
 const LineChart = ({ data, width, height, color }) => {
-  const dataFormatToArray = useCallback(() => {
-    if (isArray(data)) {
-      return data;
-    }
-
-    const _arr = data?.split(",");
-    return _arr || [];
-  }, [data]);
-
-  const dataChart = dataFormatToArray();
+  const dataChart = dataFormatToArray(data);
 
   /**
    * Function
@@ -39,7 +31,7 @@ const LineChart = ({ data, width, height, color }) => {
 
   const getSVGX = useCallback(
     (x) => {
-      return (x / getMaxX()) * width + 70;
+      return (x / getMaxX()) * (width - 50) + 70;
     },
     [getMaxX, width]
   );

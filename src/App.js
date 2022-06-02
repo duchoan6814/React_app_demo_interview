@@ -11,11 +11,16 @@ function App() {
         mode={CHART_MODE.LINE_CHART}
       />
       <Chart
-        data="6, 4, 5, 1, 2, 6, 6, 4, 5, 1, 2, 6"
+        data="6, 4, 5, 10 ,6, 4, 5, 1, 2, 6"
         mode={CHART_MODE.LINE_CHART}
         color={"blue"}
       />
-      <Chart mode={CHART_MODE.BAR_CHART} />
+      <Chart data={[6, 4, 5, 1, 2, 6, 6, 4]} mode={CHART_MODE.BAR_CHART} />
+      <Chart
+        data="6, 4, 5, 10 ,6, 4, 5, 1, 2, 6"
+        color="grey"
+        mode={CHART_MODE.BAR_CHART}
+      />
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.bar-chart {
+  &__axis {
+    stroke: #000000;
+  }
+
+  &__interval {
+    stroke: grey;
+
+    line {
+      stroke-dasharray: 20;
+      stroke-width: 0.5px;
+    }
+  }
+}
