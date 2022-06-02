@@ -1,10 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+import { Chart } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <h3>DEMO CHART</h3>
+      <h1>DEMO CHART</h1>
+      <Chart mode="LINE_CHART" />
+      <Chart mode="BAR_CHART" />
     </div>
   );
 }
